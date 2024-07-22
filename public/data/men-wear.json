@@ -1,0 +1,102 @@
+[
+  {
+      "id": 1,
+      "name": "T-Shirt",
+      "description": "Casual t-shirt",
+      "price": 19.99,
+      "size": "M",
+      "image": "/M1.webp",
+      "category": "men",
+      "rating": 4.4
+  },
+  {
+      "id": 2,
+      "name": "Jeans",
+      "description": "Classic blue jeans",
+      "price": 49.99,
+      "size": "L",
+      "image": "/M2.jpeg",
+      "category": "men",
+      "rating": 4.6
+  },
+  {
+      "id": 3,
+      "name": "Sweater",
+      "description": "Warm sweater",
+      "price": 59.99,
+      "size": "XL",
+      "image": "/M3.jpeg",
+      "category": "men",
+      "rating": 4.7
+  },
+  {
+      "id": 4,
+      "name": "Jacket",
+      "description": "Leather biker jacket",
+      "price": 99.99,
+      "size": "L",
+      "image": "/M4.webp",
+      "category": "men",
+      "rating": 4.8
+  },
+  {
+      "id": 5,
+      "name": "Shorts",
+      "description": "Comfortable gym shorts",
+      "price": 29.99,
+      "size": "M",
+      "image": "/M5.webp",
+      "category": "men",
+      "rating": 4.3
+  },
+  {
+      "id": 6,
+      "name": "Polo Shirt",
+      "description": "Smart casual polo shirt",
+      "price": 39.99,
+      "size": "S",
+      "image": "/M6.jpeg",
+      "category": "men",
+      "rating": 4.5
+  },
+  {
+      "id": 7,
+      "name": "Blazer",
+      "description": "Formal suit blazer",
+      "price": 149.99,
+      "size": "L",
+      "image": "/M7.jpeg",
+      "category": "men",
+      "rating": 4.9
+  },
+  {
+      "id": 8,
+      "name": "Hoodie",
+      "description": "Casual hooded sweatshirt",
+      "price": 49.99,
+      "size": "XL",
+      "image": "/M8.jpeg",
+      "category": "men",
+      "rating": 4.4
+  },
+  {
+      "id": 9,
+      "name": "Chinos",
+      "description": "Stylish beige chinos",
+      "price": 39.99,
+      "size": "M",
+      "image": "/M9.jpeg",
+      "category": "men",
+      "rating": 4.6
+  },
+  {
+      "id": 10,
+      "name": "Boots",
+      "description": "Leather ankle boots",
+      "price": 89.99,
+      "size": "10",
+      "image": "/M10.webp",
+      "category": "men",
+      "rating": 4.7
+  }
+]

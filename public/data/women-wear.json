@@ -1,0 +1,92 @@
+[
+  {
+      "id": 1,
+      "name": "Dress",
+      "description": "Bipson Riya 1796 Catalog Designer Wear Jam Satin Dress Women Dress Materials",
+      "price": 49.99,
+      "size": "M",
+      "image": "/W2.jpeg",
+      "category": "women",
+      "rating": 4.5
+  },
+  {
+      "id": 2,
+      "name": "Saree",
+      "description": "Women Soft Silk Saree with Contrast Border",
+      "price": 29.99,
+      "size": "S",
+      "image": "/W3.avif",
+      "category": "women",
+      "rating": 4.6
+  },
+  {
+      "id": 3,
+      "name": "Skirt",
+      "description": "Denim Skirt Women Blue Solid Casual High Waist A Line Denim Skirt",
+      "price": 39.99,
+      "size": "L",
+      "image": "/W4.webp",
+      "category": "women",
+      "rating": 4.4
+  },
+  {
+      "id": 4,
+      "name": "Jacket",
+      "description": "Warm winter jacket",
+      "price": 89.99,
+      "size": "XL",
+      "image": "/W5.webp",
+      "category": "women",
+      "rating": 4.7
+  },
+  {
+      "id": 5,
+      "name": "Trousers",
+      "description": "Combo: Set Of Two Light Brown & Black Premium Trousers",
+      "price": 49.99,
+      "size": "M",
+      "image": "/W6.webp",
+      "category": "women",
+      "rating": 4.5
+  },
+  {
+      "id": 6,
+      "name": "T-shirt",
+      "description": "COCO - IVORY WHITE",
+      "price": 19.99,
+      "size": "S",
+      "image": "/W7.webp",
+      "category": "women",
+      "rating": 4.3
+  },
+  {
+      "id": 7,
+      "name": "Sweater",
+      "description": "Cozy wool sweater",
+      "price": 59.99,
+      "size": "L",
+      "image": "/W8.jpeg",
+      "category": "women",
+      "rating": 4.6
+  },
+  {
+      "id": 8,
+      "name": "Shorts",
+      "description": "Sporty running shorts",
+      "price": 24.99,
+      "size": "M",
+      "image": "/W9.webp",
+      "category": "women",
+      "rating": 4.4
+  },
+  {
+      "id": 9,
+      "name": "Cardigan",
+      "description": "Lightweight cardigan",
+      "price": 34.99,
+      "size": "S",
+      "image": "/W10.webp",
+      "category": "women",
+      "rating": 4.5
+  }
+]

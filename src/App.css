@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem;
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #0c0c0c;
+  color: white;
+}
+
+/* Removed hover effect from buttons */
+
+
+.theme-toggle {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+ /* Dynamically set color based on theme */
+}
+
+/* Light Theme */
+.app.light {
+  background-color: #f4f4f4;
+  color: black;
+}
+
+.app.light header {
+  background-color: #333;
+  color: white;
+}
+
+.app.light .category-section {
+  background-color: #fff;
+  color: black;
+}
+
+.app.light .category-items {
+  background-color: #fff;
+  color: black;
+}
+
+/* Dark Theme */
+.app.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.app.dark header {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.app.dark .category-section {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+.app.dark .category-items {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+/* Category and Item Styles */
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.item, .cart-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 1 1 calc(33.333% - 1rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.item img, .cart-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.item h2, .cart-item h3 {
+  margin: 0.5rem 0;
+  color: inherit;
+}
+
+.item p, .cart-item p {
+  margin: 0.5rem 0;
+  flex-grow: 1;
+  color: inherit;
+}
+
+/* Cart Styles */
+.cart {
+  padding: 1rem;
+}
+
+.cart-summary {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.cart-summary p {
+  margin: 0.5rem 0;
+}
+
+.cart-item button {
+  background-color: #dc3545;
+}
+
+/* Removed hover effect from cart-item button */
+.cart-item button:hover {
+  background-color: #c82333;
+}
+
+/* Home Page Specific Styles */
+.home-page {
+  padding: 20px;
+}
+
+.category-section {
+  margin-bottom: 20px;
+}
+
+.category-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.category-items .item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+
+/* Large tablets and smaller desktops */
+@media (max-width: 992px) {
+  .item, .cart-item {
+    flex: 1 1 calc(50% - 1rem); /* Two items per row */
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+  .item, .cart-item {
+    flex: 1 1 calc(100% - 1rem); /* Full width items */
+  }
+
+  header {
+    padding: 0.5rem;
+  }
+
+  button {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .category-items {
+    gap: 5px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  .item, .cart-item {
+    flex: 1 1 calc(100% - 0.5rem); /* Full width items with smaller gap */
+  }
+
+  header {
+    padding: 0.25rem;
+  }
+
+  button {
+    padding: 0.3rem 0.7rem;
   }
 }

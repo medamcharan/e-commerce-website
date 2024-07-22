@@ -1,0 +1,168 @@
+/* src/components/Cart.css */
+
+.cart {
+    padding: 1rem;
+}
+
+.cart-item {
+    border: 1px solid #ddd;
+    border-radius: 0; /* Ensure square corners */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
+    position: relative; /* Positioning context for the arrow */
+    max-width: 250px; /* Ensure it does not exceed the container width */
+}
+
+/* Add arrow */
+.cart-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px; /* Adjust to position the arrow */
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+    border-right-color: #fff; /* Match the card background color */
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.cart-item-image {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+    margin-right: 1rem; /* Reduced margin for tighter layout */
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.rating .fa-star,
+.rating .fa-star-half-alt,
+.rating .fa-reg-star {
+    color: #f5c518; /* Yellow color for stars */
+    margin-right: 2px;
+}
+
+.cart-summary {
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+    margin-top: 20px;
+}
+
+.cart-summary p {
+    margin: 0.5rem 0;
+}
+
+.cart-item button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0; /* Square button corners */
+}
+
+.cart-item button:hover {
+    background-color: #c82333;
+}
+
+.payment-options {
+    margin-top: 20px;
+}
+
+.payment-options label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.credit-card-info,
+.paypal-info {
+    margin-top: 10px;
+}
+
+.credit-card-info input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0; /* Square input corners */
+}
+
+/* Responsive styles */
+
+/* Large tablets and smaller desktops */
+@media (max-width: 992px) {
+    .cart-item {
+        padding: 0.75rem;
+    }
+
+    .cart-summary {
+        padding-top: 0.75rem;
+    }
+
+    .payment-options {
+        margin-top: 15px;
+    }
+
+    .credit-card-info input {
+        padding: 6px;
+    }
+}
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+    .cart {
+        padding: 0.75rem;
+    }
+
+    .cart-item {
+        padding: 0.5rem;
+    }
+
+    .cart-summary {
+        padding-top: 0.5rem;
+    }
+
+    .payment-options {
+        margin-top: 10px;
+    }
+
+    .credit-card-info input {
+        padding: 4px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+    .cart {
+        padding: 0.5rem;
+    }
+
+    .cart-item {
+        padding: 0.25rem;
+    }
+
+    .cart-summary {
+        padding-top: 0.25rem;
+    }
+
+    .payment-options {
+        margin-top: 5px;
+    }
+
+    .credit-card-info input {
+        padding: 2px;
+    }
+}

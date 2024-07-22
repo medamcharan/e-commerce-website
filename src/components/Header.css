@@ -1,0 +1,198 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+}
+
+.header nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.header nav a {
+    color: var(--header-text-color);
+    text-decoration: none;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-form input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+}
+
+.search-form button:hover {
+    background-color: #777;
+}
+
+.theme-icon {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8); /* White color with 80% opacity */
+    cursor: pointer; /* Makes the icon clickable */
+}
+
+/* Dark theme specific color */
+.theme-icon.dark {
+    color: rgba(246, 246, 229, 0.8); /* Lightbulb color for dark theme with 80% opacity */
+}
+
+/* Icon styles */
+.theme-icon .fas {
+    font-size: 1.5rem; /* Adjust icon size if needed */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.logout-icon {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8); /* White color with 80% opacity */
+    cursor: pointer; /* Makes the icon clickable */
+    position: relative; /* For tooltip positioning */
+}
+
+.logout-icon .fas {
+    font-size: 1.5rem; /* Adjust icon size if needed */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Tooltip */
+.logout-icon::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 0.25rem;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.logout-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Light and Dark themes */
+.header.light {
+    --header-bg-color: #fff;
+    --header-text-color: #eae3e3;
+}
+
+.header.dark {
+    --header-bg-color: #333;
+    --header-text-color: #fff;
+}
+
+.cart-item-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .header {
+        padding: 0.75rem;
+    }
+
+    .search-form {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .search-form {
+        flex-direction: row;
+    }
+
+    .theme-icon {
+        font-size: 1.25rem;
+    }
+
+    .logout-icon {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0.5rem;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-form input,
+    .search-form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 0.5rem;
+    }
+
+    .header nav {
+        font-size: 0.875rem;
+    }
+
+    .theme-icon {
+        font-size: 1rem;
+    }
+
+    .logout-icon {
+        font-size: 1rem;
+    }
+
+    .cart-item-count {
+        font-size: 0.65rem;
+    }
+}
