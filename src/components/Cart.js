@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardMedia, Typography, Box, Button, Radio, FormControlLabel, TextField } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography, Box, Button, Radio, FormControlLabel, TextField, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import './Cart.css';
 
@@ -8,6 +8,10 @@ const Cart = ({ cart, setCart }) => {
   const [cardNumber, setCardNumber] = useState('');
   const [cardExpiry, setCardExpiry] = useState('');
   const [cardCVC, setCardCVC] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [zipCode, setZipCode] = useState('');
+  const [openPopup, setOpenPopup] = useState(false);
 
   const removeFromCart = (id) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
@@ -30,9 +34,30 @@ const Cart = ({ cart, setCart }) => {
 
   const handleCheckout = () => {
     if (paymentMethod === 'credit-card') {
+      if (!cardNumber || !cardExpiry || !cardCVC || !address || !city || !zipCode) {
+        alert('Please fill out all fields.');
+        return;
+      }
       console.log('Processing credit card payment...');
     } else if (paymentMethod === 'paypal') {
       console.log('Redirecting to PayPal...');
+    }
+    setOpenPopup(true);
+  };
+
+  const handleAddressChange = (e) => {
+    switch (e.target.name) {
+      case 'address':
+        setAddress(e.target.value);
+        break;
+      case 'city':
+        setCity(e.target.value);
+        break;
+      case 'zipCode':
+        setZipCode(e.target.value);
+        break;
+      default:
+        break;
     }
   };
 
@@ -170,6 +195,9 @@ const Cart = ({ cart, setCart }) => {
 
         {paymentMethod === 'credit-card' && (
           <Box sx={{ mt: 2 }}>
+            <Typography variant="h6" sx={{ mb: 1 }}>
+              Credit Card Details
+            </Typography>
             <TextField
               label="Card Number"
               value={cardNumber}
@@ -190,6 +218,32 @@ const Cart = ({ cart, setCart }) => {
               onChange={(e) => setCardCVC(e.target.value)}
               fullWidth
             />
+            <Typography variant="h6" sx={{ mt: 2, mb: 1 }}>
+              Shipping Address
+            </Typography>
+            <TextField
+              label="Address"
+              name="address"
+              value={address}
+              onChange={handleAddressChange}
+              fullWidth
+              sx={{ mb: 1 }}
+            />
+            <TextField
+              label="City"
+              name="city"
+              value={city}
+              onChange={handleAddressChange}
+              fullWidth
+              sx={{ mb: 1 }}
+            />
+            <TextField
+              label="Zip Code"
+              name="zipCode"
+              value={zipCode}
+              onChange={handleAddressChange}
+              fullWidth
+            />
           </Box>
         )}
 
@@ -202,12 +256,24 @@ const Cart = ({ cart, setCart }) => {
         <Button 
           variant="contained" 
           color="primary" 
-          sx={{ mt: 3 }} 
+          sx={{ mt: 2 }} 
           onClick={handleCheckout}
         >
           Checkout
         </Button>
       </Box>
+
+      <Dialog open={openPopup} onClose={() => setOpenPopup(false)}>
+        <DialogTitle>Checkout Successful</DialogTitle>
+        <DialogContent>
+          <Typography variant="body1">Thank you for your purchase!</Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setOpenPopup(false)} color="primary">
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Box>
   );
 };

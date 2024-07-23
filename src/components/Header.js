@@ -4,6 +4,7 @@ import { AppBar, Toolbar, Typography, InputBase, Badge, Avatar, Box } from '@mui
 import { Search, LightMode, DarkMode, Logout, Home, ShoppingCart } from '@mui/icons-material';
 import { styled, alpha } from '@mui/material/styles';
 
+// Styled components
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
   transition: theme.transitions.create(['background-color'], {
@@ -19,12 +20,11 @@ const SearchBar = styled('div')(({ theme }) => ({
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-  marginRight: theme.spacing(25),
   marginLeft: theme.spacing(2),
   width: '100%',
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(6),
     width: 'auto',
+    marginLeft: theme.spacing(3),
   },
 }));
 
@@ -42,7 +42,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(5)})`,
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
@@ -56,11 +56,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const ClickableIcon = styled(Box)(({ theme }) => ({
   cursor: 'pointer',
-  margin: theme.spacing(0, 2),
+  margin: theme.spacing(0, 1),
   display: 'flex',
   alignItems: 'center',
 }));
 
+// Header component
 const Header = ({ onSearch, cartItemCount, userEmail, theme, toggleTheme }) => {
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
@@ -82,12 +83,19 @@ const Header = ({ onSearch, cartItemCount, userEmail, theme, toggleTheme }) => {
 
   return (
     <StyledAppBar position="static">
-      <Toolbar sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+      <Toolbar
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+        }}
+      >
         {/* Left Side */}
         <Box sx={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-          <Avatar sx={{ bgcolor: 'black', mr: 0 }}>V</Avatar>
+          <Avatar sx={{ bgcolor: 'black', mr: 1 }}>V</Avatar>
           <Typography variant="h6" component="div">
-            ouge
+            Vouge
           </Typography>
         </Box>
         {/* Center: Category Links */}
@@ -99,28 +107,32 @@ const Header = ({ onSearch, cartItemCount, userEmail, theme, toggleTheme }) => {
             justifyContent: 'center',
             flexWrap: 'wrap',
             '& a': {
-              margin: '0 16px',
+              margin: '0 8px',
+              fontSize: '0.875rem',
+              textDecoration: 'none',
+              color: 'inherit',
+              textAlign: 'center',
             },
             '@media (min-width:600px)': {
               '& a': {
-                margin: '0 24px',
+                margin: '0 16px',
               },
             },
           }}
         >
-          <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
+          <Link to="/" title="Home">
             <Home />
           </Link>
-          <Link to="/women" style={{ color: 'inherit', textDecoration: 'none' }}>
+          <Link to="/women" title="Women">
             Women
           </Link>
-          <Link to="/men" style={{ color: 'inherit', textDecoration: 'none' }}>
+          <Link to="/men" title="Men">
             Men
           </Link>
-          <Link to="/kids" style={{ color: 'inherit', textDecoration: 'none' }}>
+          <Link to="/kids" title="Kids">
             Kids
           </Link>
-          <Link to="/accessories" style={{ color: 'inherit', textDecoration: 'none' }}>
+          <Link to="/accessories" title="Accessories">
             Accessories
           </Link>
         </Box>

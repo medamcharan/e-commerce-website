@@ -8,7 +8,8 @@ import HomePage from './components/HomePage';
 import SearchResults from './components/SearchResults';
 import Login from './components/Login';
 import Register from './components/Register';
-import ForgotPassword from './components/ForgotPassword'; // Import ForgotPassword component
+import ForgotPassword from './components/ForgotPassword';
+
 import './App.css';
 
 const App = () => {
