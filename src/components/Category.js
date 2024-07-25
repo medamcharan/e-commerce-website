@@ -23,7 +23,7 @@ const Category = ({ items, addToCart }) => {
       sx={{
         p: { xs: 2, sm: 4 },
         display: 'grid',
-        gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr', lg: '1fr 1fr 1fr 1fr' },
+        gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }, // 3 cards per row on medium screens
         gap: 2,
       }}
     >

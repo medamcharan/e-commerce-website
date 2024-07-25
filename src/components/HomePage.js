@@ -44,35 +44,32 @@ const HomePage = ({ categories, searchQuery }) => {
                   <Card className="item" sx={{ height: '100%' }}>
                     <CardMedia
                       component="img"
-                      height="140"
+                      className="card-media"
                       image={item.image}
                       alt={item.name}
                     />
-                    <CardContent>
+                    <CardContent className="item-content">
                       <Typography gutterBottom variant="h5" component="div">
                         {item.name}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {item.description}
                       </Typography>
                       <Typography variant="body1" color="text.primary">
                         ${item.price.toFixed(2)}
                       </Typography>
+                      <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                        {item.description}
+                      </Typography>
                     </CardContent>
-                    <Link to={`/${key}`}>
-                      <Button size="small" color="inherit" sx={{ backgroundColor: 'black', color: 'white', '&:hover': { backgroundColor: 'darkgrey' } }}>
-                        See More
-                      </Button>
-                    </Link>
+                    <Box sx={{ display: 'flex', justifyContent: 'center', p: 2 }}>
+                      <Link to={`/${key}`} style={{ textDecoration: 'none' }}>
+                        <Button size="small" color="inherit" sx={{ backgroundColor: 'black', color: 'white', '&:hover': { backgroundColor: 'darkgrey' } }}>
+                          See More
+                        </Button>
+                      </Link>
+                    </Box>
                   </Card>
                 </Grid>
               ))}
             </Grid>
-            <Link to={`/${key}`} style={{ textDecoration: 'none' }}>
-              <Button variant="contained" className="see-more-button" sx={{ mt: 3, backgroundColor: 'black', color: 'white', '&:hover': { backgroundColor: 'darkgrey' } }}>
-                See More
-              </Button>
-            </Link>
           </Box>
         );
       })}

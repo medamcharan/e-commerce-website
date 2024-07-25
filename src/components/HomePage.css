@@ -1,94 +1,111 @@
 .home-page {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.promo-section {
+  background-image: url('bg2.jpg'); /* Path relative to the public folder */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image within the section */
+  background-repeat: no-repeat; /* Prevents repeating of the image */
+  color: rgb(239, 234, 234);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  position: relative; /* Allows positioning child elements */
+}
+
+.promo-content h1,
+.promo-content h2,
+.promo-content p {
+  opacity: 0; /* Initially hidden for fade-in effect */
+  animation-duration: 2s; /* Duration of animation */
+  animation-fill-mode: forwards; /* Keeps the final state of animation */
+}
+
+/* Heartbeat animation for h1 */
+.promo-content h1 {
+  animation-name: heartbeat;
+  animation-delay: 0s;
+}
+
+/* Slide animation for Shop Now */
+.promo-content button {
+  animation-name: slideIn;
+  animation-delay: 2s; /* Delay to match the fade-in of previous elements */
+}
+
+/* Fade animation for h2 and p */
+.promo-content h2 {
+  animation-name: fadeIn;
+  animation-delay: 1s; /* Delay to ensure this fades in after h1 */
+}
+
+.promo-content p {
+  animation-name: fadeIn;
+  animation-delay: 1.5s; /* Delay to ensure this fades in after h2 */
+}
+
+/* Keyframes for heartbeat animation */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
   }
-  
-  .promo-section {
-    background-image: url('bg2.jpg'); /* Path relative to the public folder */
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the image within the section */
-    background-repeat: no-repeat; /* Prevents repeating of the image */
-    color: rgb(239, 234, 234);
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    position: relative; /* Allows positioning child elements */
+  50% {
+    transform: scale(1.1);
   }
-  
-  .promo-content h1,
-  .promo-content h2,
-  .promo-content p {
-    opacity: 0; /* Initially hidden for fade-in effect */
-    animation-duration: 2s; /* Duration of animation */
-    animation-fill-mode: forwards; /* Keeps the final state of animation */
+}
+
+/* Keyframes for slide animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
-  /* Heartbeat animation for h1 */
-  .promo-content h1 {
-    animation-name: heartbeat;
-    animation-delay: 0s;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  /* Slide animation for Shop Now */
-  .promo-content button {
-    animation-name: slideIn;
-    animation-delay: 2s; /* Delay to match the fade-in of previous elements */
+}
+
+/* Keyframes for fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  /* Fade animation for h2 and p */
-  .promo-content h2 {
-    animation-name: fadeIn;
-    animation-delay: 1s; /* Delay to ensure this fades in after h1 */
+  to {
+    opacity: 1;
   }
-  
-  .promo-content p {
-    animation-name: fadeIn;
-    animation-delay: 1.5s; /* Delay to ensure this fades in after h2 */
-  }
-  
-  /* Keyframes for heartbeat animation */
-  @keyframes heartbeat {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-  }
-  
-  /* Keyframes for slide animation */
-  @keyframes slideIn {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Keyframes for fade animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .category-section {
-    margin-bottom: 40px;
-  }
-  
-  .category-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .see-more-button {
-    margin: 20px auto;
-    display: block;
-  }
-  
+}
+
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.item-content {
+  flex: 1;
+}
+
+.see-more-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Ensuring all card images are the same size */
+.card-media {
+  width: 100%;
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}

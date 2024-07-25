@@ -1,6 +1,6 @@
 // src/components/Login.js
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import './Login.css'; // Ensure you have a CSS file for styling
 
@@ -59,7 +59,7 @@ const Login = () => {
         </div>
         <button type="submit">Login</button>
         <div className="forgot-password">
-          <a href="/forgot-password">Forgot Password?</a>
+          <Link to="/forgot-password">Forgot Password?</Link>
         </div>
       </form>
     </div>
