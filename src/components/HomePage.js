@@ -40,7 +40,7 @@ const HomePage = ({ categories, searchQuery }) => {
             </Typography>
             <Grid container spacing={2}>
               {filteredItems.slice(0, 4).map((item) => (
-                <Grid item xs={12} sm={6} md={3} key={item.id}>
+                <Grid item xs={6} sm={6} md={3} key={item.id}>
                   <Card className="item" sx={{ height: '100%' }}>
                     <CardMedia
                       component="img"

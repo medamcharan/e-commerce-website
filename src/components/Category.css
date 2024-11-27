@@ -1,123 +1,79 @@
-/* src/components/Category.css */
-
-.category {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-    justify-content: center;
+/* Container for the grid layout */
+.category-container {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 16px; /* Space between cards */
 }
 
-.item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    max-width: 300px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 1 1 200px; /* Ensures items are responsive */
-    padding: 1rem; /* Ensure padding inside item */
-    transition: transform 0.3s, box-shadow 0.3s;
+/* Individual card styling */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out; /* Smooth hover transitions */
 }
 
-.item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+/* Hover effect with glossy shine */
+.category-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.1)); /* Glossy shine effect */
 }
 
-.item img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
+/* Image within the card */
+.category-card img {
+  width: 100%;
+  height: auto; /* Allow image to dictate height */
+  object-fit: contain; /* Ensure the entire image is shown */
 }
 
-.item h2 {
-    margin: 0.5rem 0;
-    font-size: 1.25rem;
-    font-weight: 500;
+/* Card content area */
+.category-card-content {
+  padding: 16px;
+  text-align: center; /* Center-align text */
 }
 
-.item p {
-    margin: 0.5rem 0;
-    color: #555;
+.category-card-content h6 {
+  font-size: 1.25rem; /* Larger font size for titles */
+  margin: 8px 0;
 }
 
-.item .rating {
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem 0;
+.category-card-content p {
+  font-size: 1rem;
+  color: #666; /* Subtle text color */
+  margin: 4px 0;
 }
 
-.item .rating .fa-star,
-.item .rating .fa-star-half-alt,
-.item .rating .fa-reg-star {
-    color: #f5c518; /* Yellow color for stars */
-    margin: 0 2px;
+/* Rating stars */
+.category-card-stars {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.875rem;
-    transition: background-color 0.3s, transform 0.3s;
+/* Add to Cart button */
+.category-card-button {
+  background-color: grey; /* Changed to grey */
+  color: white; /* White text for contrast */
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth hover transitions */
 }
 
-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+.category-card-button:hover {
+  background-color: darkgrey; /* Darker grey on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
-/* Responsive styles */
-
-/* Large tablets and smaller desktops */
-@media (max-width: 992px) {
-    .item {
-        max-width: 250px;
-    }
-
-    .category {
-        gap: 0.75rem;
-        padding: 0.75rem;
-    }
-
-    button {
-        padding: 0.6rem 1.2rem;
-    }
-}
-
-/* Tablets and smaller devices */
+/* Media query for mobile screens */
 @media (max-width: 768px) {
-    .item {
-        max-width: 200px;
-    }
-
-    .category {
-        gap: 0.5rem;
-        padding: 0.5rem;
-    }
-
-    button {
-        padding: 0.5rem 1rem;
-    }
-}
-
-/* Mobile phones */
-@media (max-width: 576px) {
-    .item {
-        max-width: 150px;
-    }
-
-    .category {
-        gap: 0.25rem;
-        padding: 0.25rem;
-    }
-
-    button {
-        padding: 0.4rem 0.8rem;
-    }
+  .category-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
 }

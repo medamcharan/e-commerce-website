@@ -12,6 +12,7 @@
   border-radius: 8px;
   margin-bottom: 2rem;
   position: relative; /* Allows positioning child elements */
+  
 }
 
 .promo-content h1,

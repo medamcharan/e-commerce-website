@@ -31,11 +31,13 @@ const Login = () => {
 
   return (
     <div className="login-page">
+        <div className="circle">
+        <div >
       <form onSubmit={handleLogin} className="login-form">
-        <h2>Login</h2>
+        <h2>𝙻𝚘𝚐𝚒𝚗</h2>
         {error && <p className="error">{error}</p>}
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email"><b> 𝙴𝚖𝚊𝚒𝚕:</b></label>
           <input
             type="email"
             id="email"
@@ -45,7 +47,7 @@ const Login = () => {
           />
         </div>
         <div className="form-group password-group">
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password"><b> 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍:</b></label>
           <input
             type={showPassword ? 'text' : 'password'}
             id="password"
@@ -54,14 +56,19 @@ const Login = () => {
             required
           />
           <span className="password-toggle" onClick={togglePasswordVisibility}>
-            {showPassword ? <FaEyeSlash /> : <FaEye />}
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
           </span>
         </div>
         <button type="submit">Login</button>
         <div className="forgot-password">
-          <Link to="/forgot-password">Forgot Password?</Link>
+        <Link to="/register">Ｒｅｇｉｓｔｅｒ</Link>
+        <br></br>
+          <Link to="/forgot-password">Ｆｏｒｇｏｔ Ｐａｓｓｗｏｒｄ?</Link>
+        
         </div>
       </form>
+      </div>
+      </div>
     </div>
   );
 };

@@ -4,16 +4,42 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0; /* Or any other background color */
+  position: relative;
+  background: linear-gradient(135deg, #000000, #434343, #1e1e1e, #00bcd4);
+  background-size: 400% 400%; /* For smooth gradient effect */
+  animation: gradientAnimation 10s ease infinite; /* Adding flowing animation */
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.circle {
+  width: 750px; /* Width of the semi-circle */
+  height: 700px; /* Height of the semi-circle */
+  border-radius: 50%;
+  background: linear-gradient(135deg, #000000, #434343, #1e1e1e, #00bcd4);
+  position: absolute; /* Position it relative to the nearest positioned ancestor */
+  border: 100px solid linear-gradient(135deg, #000000, #434343, #1e1e1e, #00bcd4);
+  background-size: 400% 400%; /* For smooth gradient effect */
+  animation: gradientAnimation 10s ease infinite; /* Adding flowing animation */
+  box-shadow: 0 0 80px rgba(252, 252, 250, 0.8); /* Glowing effect */
 }
 
 .login-form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px; /* Adjust the width as needed */
+  margin-top: 5cm;
+  margin-left: 5cm;
 }
 
 h2 {
@@ -30,8 +56,8 @@ h2 {
 }
 
 .form-group input {
-  width: 100%;
-  padding: 10px;
+  width: 90%;
+  padding: 6px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -43,15 +69,15 @@ h2 {
 .password-group .password-toggle {
   position: absolute;
   top: 75%;
-  right: 10px;
+  right: 3px;
   transform: translateY(-50%);
   cursor: pointer;
 }
 
 button {
-  width: 100%;
+  width: 90%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #02020200;
   border: none;
   border-radius: 4px;
   color: #fff;
@@ -60,7 +86,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #675f5fdd;
 }
 
 .forgot-password {
@@ -69,7 +95,7 @@ button:hover {
 }
 
 .forgot-password a {
-  color: #007bff;
+  color: #060606;
   text-decoration: none;
 }
 
@@ -80,4 +106,48 @@ button:hover {
 .error {
   color: red;
   margin-bottom: 15px;
+}
+@media screen and (max-width: 480px) {
+  
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140vh;
+    position: relative;
+    
+   
+  }
+  
+  .circle {
+    margin-top:3cm;
+    width: 0px; /* Width of the semi-circle */
+    height: 0px; /* Height of the semi-circle */
+    border-radius: 50%;
+    
+   
+   
+    
+   
+    
+    
+  }
+  
+  
+  
+  
+  
+  .login-form {
+    margin-left:6cm; /* Smaller margin for very small screens */
+    margin-top: 4.5cm; /* Adjust margin for small screens */
+    max-width: 50%; /* Ensure form fills almost the entire width */
+  }
+
+  button {
+    width: 4cm; /* Set the width of the button to 2 cm */
+  }
+  
+  button:hover {
+    background: #0b0028;
+  }
 }

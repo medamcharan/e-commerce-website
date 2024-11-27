@@ -31,12 +31,14 @@ const ForgotPassword = () => {
 
   return (
     <div className="forgot-password-page">
+       <div className="circle">
+       <div >
       <form onSubmit={handleResetRequest} className="forgot-password-form">
-        <h2>Forgot Password</h2>
+        <h2>𝙵𝚘𝚛𝚐𝚘𝚝 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍</h2>
         {error && <p className="error">{error}</p>}
         {message && <p className="success">{message}</p>}
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email"><b>𝙴𝚖𝚊𝚒𝚕:</b></label>
           <input
             type="email"
             id="email"
@@ -47,8 +49,13 @@ const ForgotPassword = () => {
           />
         </div>
         <button type="submit">Reset Password</button>
-        <p>Remembered your password? <Link to="/login">Log in</Link></p>
+        <p style={{ color: 'black' }}>Remembered your password?<Link to="/login" style={{ color: 'black' }}>  Log in</Link>
+        </p>
       </form>
+      </div >
+        
+
+      </div>
     </div>
   );
 };
