@@ -1,6 +1,6 @@
 ### Vouge Shopping App
 
-**Project Link:** [Vouge Shopping App](https://lucent-ganache-87e68f.netlify.app)
+**Project Link:** [Vouge Shopping App](https://resplendent-dodol-877581.netlify.app/)
 
 - **Overview:** Developed a dynamic shopping app using **React**, featuring a modern, user-friendly interface that offers a seamless online shopping experience.
 
@@ -16,4 +16,4 @@
 
 - **Performance Optimization:** Optimized the app for fast load times and smooth interactions, ensuring a quick and efficient user experience.
 
-Check it out live at [Vouge Shopping App](https://lucent-ganache-87e68f.netlify.app)!
+Check it out live at [Vouge Shopping App](https://resplendent-dodol-877581.netlify.app/)!
