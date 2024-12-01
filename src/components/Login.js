@@ -34,7 +34,7 @@ const Login = () => {
         <div className="circle">
         <div >
       <form onSubmit={handleLogin} className="login-form">
-        <h2>𝙻𝚘𝚐𝚒𝚗</h2>
+        <h2 style={{ color: 'white' }}>𝙻𝚘𝚐𝚒𝚗</h2>
         {error && <p className="error">{error}</p>}
         <div className="form-group">
           <label htmlFor="email"><b> 𝙴𝚖𝚊𝚒𝚕:</b></label>
@@ -61,9 +61,9 @@ const Login = () => {
         </div>
         <button type="submit">Login</button>
         <div className="forgot-password">
-        <Link to="/register">Ｒｅｇｉｓｔｅｒ</Link>
+        <Link to="/register" style={{ color: 'white' }}>Ｒｅｇｉｓｔｅｒ</Link>
         <br></br>
-          <Link to="/forgot-password">Ｆｏｒｇｏｔ Ｐａｓｓｗｏｒｄ?</Link>
+          <Link to="/forgot-password" style={{ color: 'white' }}>Ｆｏｒｇｏｔ Ｐａｓｓｗｏｒｄ?</Link>
         
         </div>
       </form>

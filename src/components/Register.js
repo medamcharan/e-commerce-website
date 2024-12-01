@@ -73,7 +73,7 @@ const Register = () => {
         <br></br>
         <br></br>
         <br></br>
-        <p>Already have an account? <Link style={{ color: 'black' }}  to="/login">Ｌｏｇ ｉｎ</Link></p>
+        <p>Already have an account? <Link style={{ color: 'white' }}  to="/login">Ｌｏｇ ｉｎ</Link></p>
       </form>
       </div>
     </div>

@@ -34,7 +34,7 @@ const ForgotPassword = () => {
        <div className="circle">
        <div >
       <form onSubmit={handleResetRequest} className="forgot-password-form">
-        <h2>𝙵𝚘𝚛𝚐𝚘𝚝 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍</h2>
+        <h2 style={{ color: 'white' }}>𝙵𝚘𝚛𝚐𝚘𝚝 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍</h2>
         {error && <p className="error">{error}</p>}
         {message && <p className="success">{message}</p>}
         <div className="form-group">
@@ -49,7 +49,7 @@ const ForgotPassword = () => {
           />
         </div>
         <button type="submit">Reset Password</button>
-        <p style={{ color: 'black' }}>Remembered your password?<Link to="/login" style={{ color: 'black' }}>  Log in</Link>
+        <p style={{ color: 'white' }}>Remembered your password?<Link to="/login" style={{ color: 'white' }}>  Log in</Link>
         </p>
       </form>
       </div >

@@ -41,32 +41,41 @@ const HomePage = ({ categories, searchQuery }) => {
             <Grid container spacing={2}>
               {filteredItems.slice(0, 4).map((item) => (
                 <Grid item xs={6} sm={6} md={3} key={item.id}>
-                  <Card className="item" sx={{ height: '100%' }}>
-                    <CardMedia
-                      component="img"
-                      className="card-media"
-                      image={item.image}
-                      alt={item.name}
-                    />
-                    <CardContent className="item-content">
-                      <Typography gutterBottom variant="h5" component="div">
-                        {item.name}
-                      </Typography>
-                      <Typography variant="body1" color="text.primary">
-                        ${item.price.toFixed(2)}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-                        {item.description}
-                      </Typography>
-                    </CardContent>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', p: 2 }}>
-                      <Link to={`/${key}`} style={{ textDecoration: 'none' }}>
-                        <Button size="small" color="inherit" sx={{ backgroundColor: 'black', color: 'white', '&:hover': { backgroundColor: 'darkgrey' } }}>
-                          See More
-                        </Button>
-                      </Link>
-                    </Box>
-                  </Card>
+                 <Card className="card" sx={{ height: '100%' }}>
+  <CardMedia
+    component="img"
+    className="card-media"
+    image={item.image}
+    alt={item.name}
+  />
+  <CardContent className="item-content">
+    <Typography gutterBottom variant="h5" component="div">
+      {item.name}
+    </Typography>
+    <Typography variant="body1" color='#666'>
+      ${item.price.toFixed(2)}
+    </Typography>
+    <Typography variant="body2" color="#666" sx={{ mt: 1 }}>
+      {item.description}
+    </Typography>
+  </CardContent>
+  <Box sx={{ display: 'flex', justifyContent: 'center', p: 2 }}>
+    <Link to={`/${key}`} style={{ textDecoration: 'none' }}>
+      <Button
+        size="small"
+        color="inherit"
+        sx={{
+          backgroundColor: 'black',
+          color: 'white',
+          '&:hover': { backgroundColor: 'darkgrey' },
+        }}
+      >
+        See More
+      </Button>
+    </Link>
+  </Box>
+</Card>
+
                 </Grid>
               ))}
             </Grid>
