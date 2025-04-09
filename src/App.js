@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Header from './components/Header';
@@ -10,7 +9,8 @@ import SearchResults from './components/SearchResults';
 import Login from './components/Login';
 import Register from './components/Register';
 import ForgotPassword from './components/ForgotPassword';
-
+import Chatbot from './components/Chatbot';
+import OrdersPage from './components/OrdersPage'; 
 import './App.css';
 
 const App = () => {
@@ -96,30 +96,31 @@ const App = () => {
         <Routes>
           <Route path="/login" element={isAuthenticated ? <Navigate to="/" /> : <Login />} />
           <Route path="/register" element={isAuthenticated || isRegistered ? <Navigate to="/" /> : <Register />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} /> {/* Add ForgotPassword route */}
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route
             path="*"
             element={
               <ProtectedRoute>
-                <>
-                  <Header
-                    toggleTheme={toggleTheme}
-                    theme={theme}
-                    onSearch={handleSearch}
-                    cartItemCount={cartItemCount}
-                  />
-                  <Routes>
-                    <Route path="/" element={<HomePage categories={categories} searchQuery={searchQuery} onAddToCart={addToCart} />} />
-                    <Route path="/women" element={<Category items={filterItems(categories.women)} addToCart={addToCart} />} />
-                    <Route path="/men" element={<Category items={filterItems(categories.men)} addToCart={addToCart} />} />
-                    <Route path="/kids" element={<Category items={filterItems(categories.kids)} addToCart={addToCart} />} />
-                    <Route path="/accessories" element={<Category items={filterItems(categories.accessories)} addToCart={addToCart} />} />
-                    <Route path="/details/:category/:id" element={<ItemDetails categories={categories} />} />
-                    <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
-                    <Route path="/search" element={<SearchResults searchQuery={searchQuery} filterItems={filterItems} />} />
-                    <Route path="*" element={<Navigate to="/" />} />
-                  </Routes>
-                </>
+                <Header
+                  toggleTheme={toggleTheme}
+                  theme={theme}
+                  onSearch={handleSearch}
+                  cartItemCount={cartItemCount}
+                />
+                <Chatbot />
+                <Routes>
+                  <Route path="/chat" element={<Chatbot />} />
+                  <Route path="/" element={<HomePage categories={categories} searchQuery={searchQuery} onAddToCart={addToCart} />} />
+                  <Route path="/women" element={<Category items={filterItems(categories.women)} addToCart={addToCart} />} />
+                  <Route path="/men" element={<Category items={filterItems(categories.men)} addToCart={addToCart} />} />
+                  <Route path="/kids" element={<Category items={filterItems(categories.kids)} addToCart={addToCart} />} />
+                  <Route path="/accessories" element={<Category items={filterItems(categories.accessories)} addToCart={addToCart} />} />
+                  <Route path="/details/:category/:id" element={<ItemDetails categories={categories} />} />
+                  <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+                  <Route path="/search" element={<SearchResults searchQuery={searchQuery} filterItems={filterItems} />} />
+                  <Route path="/orders" element={<OrdersPage />} /> {/* Add OrdersPage route */}
+                  <Route path="*" element={<Navigate to="/" />} />
+                </Routes>
               </ProtectedRoute>
             }
           />

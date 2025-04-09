@@ -13,13 +13,14 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-
+  
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const user = users.find(user => user.email === email && user.password === password);
-
+  
     if (user) {
       localStorage.setItem('authenticated', 'true');
-      navigate('/');
+      localStorage.setItem('email', user.email);  // Store the email of the logged-in user
+      navigate('/account'); // Navigate to account page after successful login
     } else {
       setError('Invalid email or password');
     }

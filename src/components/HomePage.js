@@ -53,7 +53,7 @@ const HomePage = ({ categories, searchQuery }) => {
       {item.name}
     </Typography>
     <Typography variant="body1" color='#666'>
-      ${item.price.toFixed(2)}
+    ₹{item.price.toFixed(2)}
     </Typography>
     <Typography variant="body2" color="#666" sx={{ mt: 1 }}>
       {item.description}

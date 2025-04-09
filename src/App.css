@@ -3,6 +3,17 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+.chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  z-index: 1000;
+}
 
 .app {
   display: flex;

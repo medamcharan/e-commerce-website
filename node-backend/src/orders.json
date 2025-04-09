@@ -1,0 +1,186 @@
+[
+  {
+    "items": [
+      {
+        "id": 2,
+        "name": "Saree",
+        "description": "Women Soft Silk Saree with Contrast Border",
+        "price": 2489,
+        "size": "S",
+        "image": "/W3.avif",
+        "category": "women",
+        "rating": 4.6,
+        "website": "VOUGE",
+        "quantity": 1
+      },
+      {
+        "id": 3,
+        "name": "Skirt",
+        "description": "Denim Skirt Women Blue Solid Casual High Waist A Line Denim Skirt",
+        "price": 3315,
+        "size": "L",
+        "image": "/W4.webp",
+        "category": "women",
+        "rating": 4.4,
+        "website": "VOUGE",
+        "quantity": 2
+      },
+      {
+        "id": 1,
+        "name": "T-Shirt",
+        "description": "Casual t-shirt",
+        "price": 1659,
+        "size": "M",
+        "image": "/M1.webp",
+        "category": "men",
+        "rating": 4.4,
+        "website": "VOUGE",
+        "quantity": 1
+      }
+    ],
+    "totalAmount": "11446.24",
+    "shippingAddress": {
+      "address": "c camp",
+      "city": "kurnool",
+      "zipCode": "560037"
+    },
+    "paymentMethod": "credit-card",
+    "cardLastFour": "4578",
+    "id": 1
+  },
+  {
+    "items": [
+      {
+        "id": 2,
+        "name": "Kids T-Shirt",
+        "description": "Cute cotton t-shirt",
+        "price": 1245,
+        "size": "S",
+        "image": "/KD2.jpeg",
+        "category": "kids",
+        "rating": 4.5,
+        "website": "VOUGE",
+        "quantity": 1
+      },
+      {
+        "id": 3,
+        "name": "Kids Jeans",
+        "description": "Durable blue jeans",
+        "price": 1659,
+        "size": "L",
+        "image": "/KD3.jpeg",
+        "category": "kids",
+        "rating": 4.2,
+        "website": "VOUGE",
+        "quantity": 1
+      }
+    ],
+    "totalAmount": "3084.05",
+    "shippingAddress": {
+      "address": "b camp",
+      "city": "kurnool",
+      "zipCode": "560037"
+    },
+    "paymentMethod": "paypal",
+    "id": 2
+  },
+  {
+    "items": [
+      {
+        "id": 2,
+        "name": "Sunglasses",
+        "description": "Sporting A Retro-inspired Design, The Eyeden's Uv 400 Protection Sunglasses Add A Vintage Touch To Your Look. And, This Timeless Style Adds A Touch Of Elegance ",
+        "price": 4149,
+        "size": "One Size",
+        "image": "/glass.webp",
+        "category": "accessories",
+        "rating": 4,
+        "website": "VOUGE",
+        "quantity": 1
+      },
+      {
+        "id": 3,
+        "name": "Hat",
+        "description": "Itopfox Women's Big Brim Sun Hat Floppy Foldable Bowknot Straw Hat Summer Beach Hat",
+        "price": 1659,
+        "size": "M",
+        "image": "/Hat.jpg",
+        "category": "accessories",
+        "rating": 4.2,
+        "website": "VOUGE",
+        "quantity": 1
+      }
+    ],
+    "totalAmount": "6168.10",
+    "shippingAddress": {
+      "address": "Marthalli",
+      "city": "Banglore",
+      "zipCode": "560007"
+    },
+    "paymentMethod": "upi",
+    "upiId": "1234567890@ybl",
+    "id": 3
+  },
+  {
+    "items": [
+      {
+        "id": 2,
+        "name": "Saree",
+        "description": "Women Soft Silk Saree with Contrast Border",
+        "price": 2489,
+        "size": "S",
+        "image": "/W3.avif",
+        "category": "women",
+        "rating": 4.6,
+        "website": "VOUGE",
+        "quantity": 2
+      }
+    ],
+    "totalAmount": "5286.64",
+    "shippingAddress": {
+      "address": "kurnool",
+      "city": "kurnool",
+      "zipCode": "560037"
+    },
+    "paymentMethod": "credit-card",
+    "cardLastFour": "5678",
+    "id": 4
+  },
+  {
+    "items": [
+      {
+        "id": 3,
+        "name": "Sweater",
+        "description": "Warm sweater",
+        "price": 4979,
+        "size": "XL",
+        "image": "/M3.jpeg",
+        "category": "men",
+        "rating": 4.7,
+        "website": "VOUGE",
+        "quantity": 1
+      },
+      {
+        "id": 4,
+        "name": "Jacket",
+        "description": "Leather biker jacket",
+        "price": 8299,
+        "size": "L",
+        "image": "/M4.webp",
+        "category": "men",
+        "rating": 4.8,
+        "website": "VOUGE",
+        "quantity": 1
+      }
+    ],
+    "totalAmount": "14101.24",
+    "shippingAddress": {
+      "address": "kurnool",
+      "city": "kurnool",
+      "zipCode": "12345"
+    },
+    "paymentMethod": "upi",
+    "upiId": "9876543210@ybl",
+    "id": 5
+  }
+]

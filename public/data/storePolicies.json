@@ -1,0 +1,18 @@
+{
+    "storeName": "VOGUE Shopping",
+    "policies": {
+      "returnPolicy": "You can return any product within 7 days of delivery as long as it is unused and in its original packaging. Refunds will be processed within 5–7 business days.",
+      "exchangePolicy": "Products can be exchanged within 7 days of delivery for size or defect issues, subject to availability.",
+      "shippingPolicy": "We offer free shipping on orders above ₹999. Orders are dispatched within 24–48 hours and delivered within 3–5 business days.",
+      "cancellationPolicy": "Orders can be canceled within 2 hours of placement. Once the order is shipped, it cannot be canceled.",
+      "paymentMethods": "We accept Credit/Debit cards, UPI, Net Banking, and Cash on Delivery (COD).",
+      "privacyPolicy": "Your personal data is secure with us. We do not share your information with third parties without consent.",
+      "supportPolicy": "For any issues or queries, our customer support is available 24/7 through chat or email at support@vogueai.shop."
+    },
+    "contactInfo": {
+      "email": "support@vogueai.shop",
+      "phone": "+91-98765-43210",
+      "address": "VOGUE AI HQ, Hyderabad, Telangana, India"
+    }
+  }
+  

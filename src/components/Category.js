@@ -41,7 +41,7 @@ const Category = ({ items, addToCart }) => {
         />
         <CardContent className="category-card-content">
           <Typography variant="h6">{item.name}</Typography>
-          <Typography variant="body2">${item.price.toFixed(2)}</Typography>
+          <Typography variant="body2">₹{item.price.toFixed(2)}</Typography>
           <Box className="category-card-stars">{renderStars(item.rating)}</Box>
           <Typography variant="body2">{item.description}</Typography>
           <Button size="small" color="inherit" sx={{ backgroundColor: 'black', color: 'white', '&:hover': { backgroundColor: 'darkgrey' } }}

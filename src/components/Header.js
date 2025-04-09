@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, InputBase, Badge, Avatar, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, InputBase, Badge, Avatar, Box, Menu, MenuItem } from '@mui/material';
 import { Search, LightMode, DarkMode, Logout, Home, ShoppingCart } from '@mui/icons-material';
 import { styled, alpha } from '@mui/material/styles';
 
@@ -64,7 +64,16 @@ const ClickableIcon = styled(Box)(({ theme }) => ({
 // Header component
 const Header = ({ onSearch, cartItemCount, userEmail, theme, toggleTheme }) => {
   const [search, setSearch] = useState('');
+  const [anchorEl, setAnchorEl] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Load the theme from localStorage when the component mounts
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      toggleTheme(savedTheme);
+    }
+  }, []);
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
@@ -81,16 +90,23 @@ const Header = ({ onSearch, cartItemCount, userEmail, theme, toggleTheme }) => {
     navigate('/login');
   };
 
+  const handleMenuClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleThemeChange = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', newTheme); // Save theme to localStorage
+    toggleTheme(newTheme);
+  };
+
   return (
     <StyledAppBar position="static">
-      <Toolbar
-        sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-        }}
-      >
+      <Toolbar sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap' }}>
         {/* Left Side */}
         <Box sx={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
           <Avatar sx={{ bgcolor: 'black', mr: 1 }}>V</Avatar>
@@ -135,8 +151,12 @@ const Header = ({ onSearch, cartItemCount, userEmail, theme, toggleTheme }) => {
           <Link to="/accessories" title="Accessories">
             Accessories
           </Link>
+          {/* Add Orders Link */}
+          <Link to="/orders" title="Orders">
+            Orders
+          </Link>
         </Box>
-        {/* Right Side: Cart, Search, Theme Toggle, Logout */}
+        {/* Right Side: Cart, Search, Theme Toggle, Logout, and Account Menu */}
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Link to="/cart" style={{ color: 'inherit', textDecoration: 'none', margin: '0 8px' }}>
             <Badge badgeContent={cartItemCount} color="error">
@@ -155,12 +175,34 @@ const Header = ({ onSearch, cartItemCount, userEmail, theme, toggleTheme }) => {
               inputProps={{ 'aria-label': 'search' }}
             />
           </SearchBar>
-          <ClickableIcon onClick={toggleTheme} title="Toggle Theme">
+          <ClickableIcon onClick={handleThemeChange} title="Toggle Theme">
             {theme === 'light' ? <LightMode fontSize="small" /> : <DarkMode fontSize="small" />}
           </ClickableIcon>
-          <ClickableIcon onClick={handleLogout} title={userEmail || 'Logout'}>
-            <Logout fontSize="small" />
-          </ClickableIcon>
+          {/* Account Dropdown Menu */}
+          {userEmail ? (
+            <>
+              <ClickableIcon onClick={handleMenuClick}>
+                <Avatar sx={{ bgcolor: 'gray', cursor: 'pointer' }}>
+                  {userEmail.charAt(0).toUpperCase()}
+                </Avatar>
+              </ClickableIcon>
+              <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
+                <MenuItem onClick={handleMenuClose}>
+                  <Typography>{userEmail}</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleLogout}>
+                  <Logout fontSize="small" sx={{ mr: 1 }} />
+                  Logout
+                </MenuItem>
+              </Menu>
+            </>
+          ) : (
+            <Link to="/login">
+              <ClickableIcon title="Login">
+                <Logout fontSize="small" />
+              </ClickableIcon>
+            </Link>
+          )}
         </Box>
       </Toolbar>
     </StyledAppBar>

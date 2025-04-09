@@ -1,103 +1,113 @@
 [
-  {
+    {
       "id": 1,
       "name": "Kids Jacket",
       "description": "Kids Casual Wear Denim Jacket",
-      "price": 29.99,
+      "price": 2489,
       "size": "M",
       "image": "/KD1.jpg",
       "category": "kids",
-      "rating": 4.3
-  },
-  {
+      "rating": 4.3,
+      "website": "VOUGE"
+    },
+    {
       "id": 2,
       "name": "Kids T-Shirt",
       "description": "Cute cotton t-shirt",
-      "price": 14.99,
+      "price": 1245,
       "size": "S",
       "image": "/KD2.jpeg",
       "category": "kids",
-      "rating": 4.5
-  },
-  {
+      "rating": 4.5,
+      "website": "VOUGE"
+    },
+    {
       "id": 3,
       "name": "Kids Jeans",
       "description": "Durable blue jeans",
-      "price": 19.99,
+      "price": 1659,
       "size": "L",
       "image": "/KD3.jpeg",
       "category": "kids",
-      "rating": 4.2
-  },
-  {
+      "rating": 4.2,
+      "website": "VOUGE"
+    },
+    {
       "id": 4,
       "name": "Kids Sweater",
       "description": "Cozy wool sweater",
-      "price": 24.99,
+      "price": 2079,
       "size": "M",
       "image": "/KD4.webp",
       "category": "kids",
-      "rating": 4.7
-  },
-  {
+      "rating": 4.7,
+      "website": "VOUGE"
+    },
+    {
       "id": 5,
       "name": "Kids Shorts",
       "description": "Comfortable gym shorts",
-      "price": 9.99,
+      "price": 829,
       "size": "S",
       "image": "/KD5.jpeg",
       "category": "kids",
-      "rating": 4.1
-  },
-  {
-    "id": 6,
-    "name": "Kids Jacket",
-    "description": "Kids Casual Wear Denim Jacket",
-    "price": 29.99,
-    "size": "M",
-    "image": "/KD1.jpg",
-    "category": "kids",
-    "rating": 4.3
-},
-{
-    "id": 7,
-    "name": "Kids T-Shirt",
-    "description": "Cute cotton t-shirt",
-    "price": 14.99,
-    "size": "S",
-    "image": "/KD2.jpeg",
-    "category": "kids",
-    "rating": 4.5
-},
-{
-    "id": 8,
-    "name": "Kids Jeans",
-    "description": "Durable blue jeans",
-    "price": 19.99,
-    "size": "L",
-    "image": "/KD3.jpeg",
-    "category": "kids",
-    "rating": 4.2
-},
-{
-    "id": 9,
-    "name": "Kids Sweater",
-    "description": "Cozy wool sweater",
-    "price": 24.99,
-    "size": "M",
-    "image": "/KD4.webp",
-    "category": "kids",
-    "rating": 4.7
-},
-{
-    "id": 10,
-    "name": "Kids Shorts",
-    "description": "Comfortable gym shorts",
-    "price": 9.99,
-    "size": "S",
-    "image": "/KD5.jpeg",
-    "category": "kids",
-    "rating": 4.1
-}
-]
-
+      "rating": 4.1,
+      "website": "VOUGE"
+    },
+    {
+      "id": 6,
+      "name": "Kids Jacket",
+      "description": "Kids Casual Wear Denim Jacket",
+      "price": 2489,
+      "size": "M",
+      "image": "/KD1.jpg",
+      "category": "kids",
+      "rating": 4.3,
+      "website": "VOUGE"
+    },
+    {
+      "id": 7,
+      "name": "Kids T-Shirt",
+      "description": "Cute cotton t-shirt",
+      "price": 1245,
+      "size": "S",
+      "image": "/KD2.jpeg",
+      "category": "kids",
+      "rating": 4.5,
+      "website": "VOUGE"
+    },
+    {
+      "id": 8,
+      "name": "Kids Jeans",
+      "description": "Durable blue jeans",
+      "price": 1659,
+      "size": "L",
+      "image": "/KD3.jpeg",
+      "category": "kids",
+      "rating": 4.2,
+      "website": "VOUGE"
+    },
+    {
+      "id": 9,
+      "name": "Kids Sweater",
+      "description": "Cozy wool sweater",
+      "price": 2079,
+      "size": "M",
+      "image": "/KD4.webp",
+      "category": "kids",
+      "rating": 4.7,
+      "website": "VOUGE"
+    },
+    {
+      "id": 10,
+      "name": "Kids Shorts",
+      "description": "Comfortable gym shorts",
+      "price": 829,
+      "size": "S",
+      "image": "/KD5.jpeg",
+      "category": "kids",
+      "rating": 4.1,
+      "website": "VOUGE"
+    }
+  ]
+  

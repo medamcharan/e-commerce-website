@@ -1,102 +1,113 @@
 [
-  {
+    {
       "id": 1,
       "name": "T-Shirt",
       "description": "Casual t-shirt",
-      "price": 19.99,
+      "price": 1659,
       "size": "M",
       "image": "/M1.webp",
       "category": "men",
-      "rating": 4.4
-  },
-  {
+      "rating": 4.4,
+      "website": "VOUGE"
+    },
+    {
       "id": 2,
       "name": "Jeans",
       "description": "Classic blue jeans",
-      "price": 49.99,
+      "price": 4145,
       "size": "L",
       "image": "/M2.jpeg",
       "category": "men",
-      "rating": 4.6
-  },
-  {
+      "rating": 4.6,
+      "website": "VOUGE"
+    },
+    {
       "id": 3,
       "name": "Sweater",
       "description": "Warm sweater",
-      "price": 59.99,
+      "price": 4979,
       "size": "XL",
       "image": "/M3.jpeg",
       "category": "men",
-      "rating": 4.7
-  },
-  {
+      "rating": 4.7,
+      "website": "VOUGE"
+    },
+    {
       "id": 4,
       "name": "Jacket",
       "description": "Leather biker jacket",
-      "price": 99.99,
+      "price": 8299,
       "size": "L",
       "image": "/M4.webp",
       "category": "men",
-      "rating": 4.8
-  },
-  {
+      "rating": 4.8,
+      "website": "VOUGE"
+    },
+    {
       "id": 5,
       "name": "Shorts",
       "description": "Comfortable gym shorts",
-      "price": 29.99,
+      "price": 2489,
       "size": "M",
       "image": "/M5.webp",
       "category": "men",
-      "rating": 4.3
-  },
-  {
+      "rating": 4.3,
+      "website": "VOUGE"
+    },
+    {
       "id": 6,
       "name": "Polo Shirt",
       "description": "Smart casual polo shirt",
-      "price": 39.99,
+      "price": 3315,
       "size": "S",
       "image": "/M6.jpeg",
       "category": "men",
-      "rating": 4.5
-  },
-  {
+      "rating": 4.5,
+      "website": "VOUGE"
+    },
+    {
       "id": 7,
       "name": "Blazer",
       "description": "Formal suit blazer",
-      "price": 149.99,
+      "price": 12445,
       "size": "L",
       "image": "/M7.jpeg",
       "category": "men",
-      "rating": 4.9
-  },
-  {
+      "rating": 4.9,
+      "website": "VOUGE"
+    },
+    {
       "id": 8,
       "name": "Hoodie",
       "description": "Casual hooded sweatshirt",
-      "price": 49.99,
+      "price": 4145,
       "size": "XL",
       "image": "/M8.jpeg",
       "category": "men",
-      "rating": 4.4
-  },
-  {
+      "rating": 4.4,
+      "website": "VOUGE"
+    },
+    {
       "id": 9,
       "name": "Chinos",
       "description": "Stylish beige chinos",
-      "price": 39.99,
+      "price": 3315,
       "size": "M",
       "image": "/M9.jpeg",
       "category": "men",
-      "rating": 4.6
-  },
-  {
+      "rating": 4.6,
+      "website": "VOUGE"
+    },
+    {
       "id": 10,
       "name": "Boots",
       "description": "Leather ankle boots",
-      "price": 89.99,
+      "price": 7459,
       "size": "10",
       "image": "/M10.webp",
       "category": "men",
-      "rating": 4.7
-  }
-]
+      "rating": 4.7,
+      "website": "VOUGE"
+    }
+  ]
+  

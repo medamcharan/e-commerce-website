@@ -1,92 +1,102 @@
 [
-  {
+    {
       "id": 1,
       "name": "Watch",
       "description": "Analogue Movement: Quartz Power source: Battery Dial style: Solid round stainless steel dial Features: Chronograph, Reset Time, Date Aperture Strap style: Black",
-      "price": 99.99,
+      "price": 8299,
       "size": "One Size",
       "image": "/watch.webp",
       "category": "accessories",
-      "rating": 4.5
-  },
-  {
+      "rating": 4.5,
+      "website": "VOUGE"
+    },
+    {
       "id": 2,
       "name": "Sunglasses",
       "description": "Sporting A Retro-inspired Design, The Eyeden's Uv 400 Protection Sunglasses Add A Vintage Touch To Your Look. And, This Timeless Style Adds A Touch Of Elegance ",
-      "price": 49.99,
+      "price": 4149,
       "size": "One Size",
       "image": "/glass.webp",
       "category": "accessories",
-      "rating": 4.0
-  },
-  {
+      "rating": 4.0,
+      "website": "VOUGE"
+    },
+    {
       "id": 3,
       "name": "Hat",
       "description": "Itopfox Women's Big Brim Sun Hat Floppy Foldable Bowknot Straw Hat Summer Beach Hat",
-      "price": 19.99,
+      "price": 1659,
       "size": "M",
       "image": "/Hat.jpg",
       "category": "accessories",
-      "rating": 4.2
-  },
-  {
+      "rating": 4.2,
+      "website": "VOUGE"
+    },
+    {
       "id": 4,
       "name": "Scarf",
       "description": "Style Code Is Trsty_6. Pattern Is Self Design. Type Is Scarf. Sales Package Is Winter Warm Scarf For Women. Occasion Is Casual. Fabric Care Is Hand Wash. Fabric Is Wool Blend.",
-      "price": 29.99,
+      "price": 2489,
       "size": "One Size",
       "image": "/Scarf.webp",
       "category": "accessories",
-      "rating": 4.7
-  },
-  {
+      "rating": 4.7,
+      "website": "VOUGE"
+    },
+    {
       "id": 5,
       "name": "Belt",
       "description": "Tommy Hilfiger Nandewar premium men's leather belt is a sleek belt made with 100% genuine leather. The matte black texture embodies the strong personality of the belt, and the elevated design gives it a touch of luxury.",
-      "price": 24.99,
+      "price": 2079,
       "size": "L",
       "image": "/Blt.webp",
       "category": "accessories",
-      "rating": 4.3
-  },
-  {
+      "rating": 4.3,
+      "website": "VOUGE"
+    },
+    {
       "id": 6,
       "name": "Bag",
       "description": "women's pu leather handbag shoulder bag hand held bag with long strap queen collection simple sober and stylish (HB5)",
-      "price": 59.99,
+      "price": 4979,
       "size": "One Size",
       "image": "/Bag.webp",
       "category": "accessories",
-      "rating": 4.6
-  },
-  {
+      "rating": 4.6,
+      "website": "VOUGE"
+    },
+    {
       "id": 7,
       "name": "Wallet",
       "description": "URBAN FOREST Stag Sand/Red Leather Wallet for Men",
-      "price": 39.99,
+      "price": 3319,
       "size": "One Size",
       "image": "/Wallt.webp",
       "category": "accessories",
-      "rating": 4.4
-  },
-  {
+      "rating": 4.4,
+      "website": "VOUGE"
+    },
+    {
       "id": 8,
       "name": "Necklace",
       "description": "Gleaming Extravaganza Diamond Necklace",
-      "price": 89.99,
+      "price": 7459,
       "size": "One Size",
       "image": "/nc.webp",
       "category": "accessories",
-      "rating": 4.8
-  },
-  {
+      "rating": 4.8,
+      "website": "VOUGE"
+    },
+    {
       "id": 10,
       "name": "Earrings",
       "description": "Silver Small Heart Drop Earrings",
-      "price": 19.99,
+      "price": 1659,
       "size": "One Size",
       "image": "/ar.webp",
       "category": "accessories",
-      "rating": 4.1
-  }
-]
+      "rating": 4.1,
+      "website": "VOUGE"
+    }
+  ]
+  
